@@ -34,3 +34,10 @@ Apple天气AQI-US = type=http-response,pattern=https://weather-data.apple.com/v1
 [MITM]
 hostname = weather-data.apple.com
 ````
+
+
+## DNSPod
+````
+[Script]
+AppleStore下载加速 = type=dns,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Surge/dnspod.js,script-update-interval=0
+````
