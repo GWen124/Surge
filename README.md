@@ -1,4 +1,4 @@
-# Surge
+# Surge脚本
 
 ## 京东比价
 ````
@@ -23,4 +23,14 @@ http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getde
 
 [MITM]
 hostname = trade-acs.m.taobao.com
+````
+
+
+## iOS_Weather_AQI_Stand
+````
+[Script]
+AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=/path/to/iOS_Weather_AQI_Standard.js
+
+[MITM]
+hostname = weather-data.apple.com
 ````
