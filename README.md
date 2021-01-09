@@ -29,7 +29,7 @@ hostname = trade-acs.m.taobao.com
 ## iOS_Weather_AQI_Stand
 ````
 [Script]
-AQI-US = type=http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=/path/to/iOS_Weather_AQI_Standard.js
+Apple天气AQI-US = type=http-response,pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/waynesg/iOS_Weather/main/iOS_Weather_AQI_Standard.js,script-update-interval=0
 
 [MITM]
 hostname = weather-data.apple.com
