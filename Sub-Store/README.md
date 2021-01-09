@@ -3,4 +3,5 @@
 ````
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Surge.sgmodule
 ````
-浏览器网址：https://sub-store.vercel.app/#/
+## 浏览器网址：
+https://sub-store.vercel.app/#/
