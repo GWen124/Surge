@@ -39,5 +39,5 @@ hostname = weather-data.apple.com
 ## DNSPod
 ````
 [Script]
-AppleStore下载加速 = type=dns,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Surge/dnspod.js,script-update-interval=0
+DNSPod = type=dns,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Surge/dnspod.js,script-update-interval=0
 ````
