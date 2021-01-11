@@ -3,7 +3,7 @@
 
 [Script]
 # BiliBili HD
-http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js, tag=Bilipj
+http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js, tag=BiliBiliHD
   
 # Netflix评分
 http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js, tag=奈飞评分1
@@ -27,7 +27,11 @@ http-response https:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user script-path
 # 联通轮播去广告
 http-response ^https?://m.client.10010.com/uniAdmsInterface/getHomePageAd script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/china_unicom.js, tag=联通轮播去广告
 
+# Apple天气
+http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=/path/to/iOS_Weather_AQI_Standard.js, tag=Apple天气
+
+
 
 [MITM]
-hostname = api.bilibili.com, ios.prod.ftl.netflix.com, api.m.jd.com, *.uve.weibo.com, trade-acs.m.taobao.com, api.weibo.cn, api.weibo.com, api2.mubu.com,m.client.10010.com,
+hostname = api.bilibili.com, ios.prod.ftl.netflix.com, api.m.jd.com, *.uve.weibo.com, trade-acs.m.taobao.com, api.weibo.cn, api.weibo.com, api2.mubu.com,m.client.10010.com, weather-data.apple.com
 
