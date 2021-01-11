@@ -32,5 +32,5 @@ http-response ^https?://m.client.10010.com/uniAdmsInterface/getHomePageAd script
 http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js, tag=皮皮虾去水印广告
 
 [MITM]
-hostname = api.bilibili.com, ios.prod.ftl.netflix.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.com, api2.mubu.com,m.client.10010.com, .*.snssdk.com
+hostname = api.bilibili.com, ios.prod.ftl.netflix.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, api.weibo.com, api2.mubu.com,m.client.10010.com, .*.snssdk.com
 
