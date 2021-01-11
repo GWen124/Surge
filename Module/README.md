@@ -12,3 +12,38 @@ https://sub-store.vercel.app/#/
 ````
 https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.surge.sgmodule
 ````
+
+## 知乎
+### 复制以下链接添加模块
+````
+https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/module/zhihu.sgmodule
+````
+
+## YouTube
+### 复制以下链接添加模块
+````
+https://raw.githubusercontent.com/jimmyorz/Surge/master/YouTube.sgmodule
+````
+
+## TikTok
+### 复制以下链接添加模块
+#### TW
+````
+https://raw.githubusercontent.com/Tartarus2014/Surge-Script/master/Unlock/TikTokTW.sgmodule
+````
+#### JP
+````
+https://raw.githubusercontent.com/Tartarus2014/Surge-Script/master/Unlock/TikTokJP.sgmodule
+````
+#### US
+````
+https://raw.githubusercontent.com/Tartarus2014/Surge-Script/master/Unlock/TikTokUS.sgmodule
+````
+#### UK
+````
+https://raw.githubusercontent.com/Tartarus2014/Surge-Script/master/Unlock/TikTokUK.sgmodule
+````
+#### KR
+````
+https://raw.githubusercontent.com/Tartarus2014/Surge-Script/master/Unlock/TikTokKR.sgmodule
+````
