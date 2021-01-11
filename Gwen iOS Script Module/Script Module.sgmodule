@@ -28,9 +28,6 @@ http-response https:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user script-path
 http-response ^https?://m.client.10010.com/uniAdmsInterface/getHomePageAd script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/china_unicom.js, tag=联通轮播去广告
 
 
-# 皮皮虾去水印广告
-http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js, tag=皮皮虾去水印广告
-
 [MITM]
-hostname = api.bilibili.com, ios.prod.ftl.netflix.com, api.m.jd.com, trade-acs.m.taobao.com, api.weibo.cn, api.weibo.com, api2.mubu.com,m.client.10010.com, .*.snssdk.com
+hostname = api.bilibili.com, ios.prod.ftl.netflix.com, api.m.jd.com, *.uve.weibo.com, trade-acs.m.taobao.com, api.weibo.cn, api.weibo.com, api2.mubu.com,m.client.10010.com,
 
