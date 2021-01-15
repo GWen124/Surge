@@ -19,7 +19,7 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/s
 
 
 [MITM]
-hostname = %APPEND%  ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com
+hostname = %APPEND% ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com
 
 
 [Script] 
