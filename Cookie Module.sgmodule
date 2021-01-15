@@ -16,4 +16,4 @@ http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signB
 
 
 [MITM] 
-hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com
+hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com
