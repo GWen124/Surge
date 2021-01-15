@@ -10,6 +10,9 @@ DOMAIN-SUFFIX, dig.bdurl.net, DIRECT
 DOMAIN-SUFFIX, ibytedtos.com, REJECT
 DOMAIN-SUFFIX, ipstatp.com, REJECT
 
+# 知乎广告拦截
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list,REJECT
+
 
 [Url Rewrite]
 # 抖音
@@ -23,7 +26,7 @@ DOMAIN-SUFFIX, ipstatp.com, REJECT
 
 
 [MITM]
-hostname = %APPEND%  ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com, *.amemv.com
+hostname = %APPEND%  ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com, *.amemv.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com
 
 
 [Script] 
@@ -40,3 +43,11 @@ http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.
 
 # 抖音 *.amemv.com
 http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js,tag=抖音
+
+# 知乎广告拦截
+http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/people\/,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_处理用户信息
+http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/(moments|topstory)(\/|\?)?(recommend|action=|feed_type=)(?!\/people),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_信息流去广告
+http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/v4\/questions,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_回答列表去广告
+http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/search\/preset_words\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_预置关键词去广告
+
+
