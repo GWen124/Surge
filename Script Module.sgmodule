@@ -1,5 +1,11 @@
 #!name=Gwen iOS Script Module
 #!desc=iOS Script 模块配置
+#!system=ios
+
+
+[MITM]
+hostname = ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com
+
 
 [Script] 
 # Netflix评分
@@ -12,8 +18,3 @@ http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness
 
 # Apple天气
 http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=/path/to/iOS_Weather_AQI_Standard.js, tag=Apple天气
-
-
-
-[MITM]
-hostname = ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com
