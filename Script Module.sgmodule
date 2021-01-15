@@ -8,55 +8,18 @@
 
 
 [Rule]
-# 抖音
-DOMAIN-SUFFIX, amemv.com, DIRECT
-DOMAIN-SUFFIX, byteimg.com, DIRECT
-DOMAIN-SUFFIX, dig.bdurl.net, DIRECT
-DOMAIN-SUFFIX, ibytedtos.com, REJECT
-DOMAIN-SUFFIX, ipstatp.com, REJECT
-
 # 知乎广告拦截
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list,REJECT
 
-# YouTube去广告
-URL-REGEX,https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost,REJECT
-URL-REGEX,https?:\/\/.+.youtube.com\/api\/stats\/ads,REJECT
-URL-REGEX,https?:\/\/.+.youtube.com\/get_midroll_,REJECT
-URL-REGEX,https?:\/\/.+.youtube.com\/pagead\/,REJECT
-URL-REGEX,https?:\/\/.+.youtube.com\/ptracking\?,REJECT
-URL-REGEX,https?:\/\/.+.youtube.com\/_get_ads,REJECT
-URL-REGEX,https?:\/\/premiumyva.appspot.com\/vmclickstoadvertisersite,REJECT
-URL-REGEX,https?:\/\/s0.2mdn.net\/ads\/,REJECT
-URL-REGEX,https?:\/\/stats.tubemogul.com\/stats\/,REJECT
-URL-REGEX,https?:\/\/youtubei.googleapis.com\/.+ad_break,REJECT
-URL-REGEX,https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log),REJECT
-URL-REGEX,https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat,REJECT
-URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT
-
 
 [Url Rewrite]
-# 抖音
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
-
 # 知乎网页显示优化
 ^https?://link\.zhihu\.com/\?target=https?%3A//(.*) https://$1 302
 ^https?://oia\.zhihu\.com https://zhuanlan.zhihu.com 302
 
-# YouTube去广告
-^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
-^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - reject-200
-^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - reject-200
-^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - reject-200
-
 
 [MITM]
-hostname = %APPEND%  ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com, *.amemv.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.googlevideo.com, *.youtube.com, youtubei.googleapis.com
+hostname = %APPEND%  ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com
 
 
 [Script] 
@@ -70,9 +33,6 @@ http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness
 
 # Apple天气 weather-data.apple.com
 http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=/path/to/iOS_Weather_AQI_Standard.js, tag=Apple天气
-
-# 抖音 *.amemv.com
-http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js,tag=抖音
 
 # 知乎APP广告拦截 www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com
 http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/people\/,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_处理用户信息
