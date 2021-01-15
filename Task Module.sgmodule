@@ -8,22 +8,22 @@ hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilib
 
 
 [Script]
-#百度贴吧签到
+#百度贴吧签到 c.tieba.b
 cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧签到
 
-#bilibili 直播签到
+#bilibili 直播签到 *.bilibili.com
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=bilibili直播签到
 
-# bilibili 银瓜子转硬币
+# bilibili 银瓜子转硬币 *.bilibili.com
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js, tag=bilibili银瓜子转硬币
 
-# 爱奇艺签到
+# 爱奇艺签到 ifac*.iqiyi.com
 #cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺签到
 
-# 什么值得买
+# 什么值得买 *.smzdm.com
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js, tag=什么值得买
 
-# 京东多合一签到
+# 京东多合一签到 api.m.jd.com
 cron "5 0 * * *" wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东多合一签到
 
 #东东农场
