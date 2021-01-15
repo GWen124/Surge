@@ -4,7 +4,7 @@
 
 
 [MITM] 
-hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com
+hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, operation-api.jimistore.com
 
 
 [Script]
