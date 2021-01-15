@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM] 
-hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, mqqapi.reader.qq.com
+hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, mqqapi.reader.qq.com, operation-api.jimistore.com
 
 
 [Script]
