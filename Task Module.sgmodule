@@ -4,7 +4,7 @@
 
 
 [MITM] 
-hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, as.xiaojukeji.com, common.diditaxi.com.cn
+hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, as.xiaojukeji.com, common.diditaxi.com.cn, h5.ele.me
 
 
 [Script]
@@ -28,3 +28,9 @@ cron "5 0 * * *" wake-system=1,timeout=60,script-path=https://raw.githubusercont
 
 # 滴滴出行签到 as.xiaojukeji.com, common.diditaxi.com.cn
 cron "0 1,20 * * *" wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行签到
+
+# 饿了么吃货豆 
+cron "50 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemPea.js, tag=饿了么吃货豆 
+
+# 饿了么签到
+cron "0 5 0 * * *" script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js, tag=饿了么签到
