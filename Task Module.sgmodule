@@ -4,7 +4,7 @@
 
 
 [MITM] 
-hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, as.xiaojukeji.com, common.diditaxi.com.cn, h5.ele.me, act.10010.com, m.client.10010.com
+hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, as.xiaojukeji.com, common.diditaxi.com.cn, h5.ele.me, act.10010.com, m.client.10010.com, promotion.waimai.meituan.com
 
 
 [Script]
@@ -37,3 +37,8 @@ cron "0 5 0 * * *" script-path=https://raw.githubusercontent.com/songyangzz/Quan
 
 # 中国联通签到 act.10010.com, m.client.10010.com
 中国联通签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,type=cron,cronexp=10 0 0 * * *
+
+# 美团 promotion.waimai.meituan.com
+美团 = type=cron,cronexp=3 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js
+
+
