@@ -2,24 +2,9 @@
 #!desc=iOS Script 模块配置
 #!system=ios
 
-[Header Rewrite]
-# 知乎网页显示优化
-^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
-
-
-[Rule]
-# 知乎广告拦截
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list,REJECT
-
-
-[Url Rewrite]
-# 知乎网页显示优化
-^https?://link\.zhihu\.com/\?target=https?%3A//(.*) https://$1 302
-^https?://oia\.zhihu\.com https://zhuanlan.zhihu.com 302
-
 
 [MITM]
-hostname = %APPEND% ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com
+hostname = %APPEND% ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com
 
 
 [Script] 
@@ -33,14 +18,5 @@ http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness
 
 # Apple天气 weather-data.apple.com
 http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=/path/to/iOS_Weather_AQI_Standard.js, tag=Apple天气
-
-# 知乎APP广告拦截 www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com
-http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/people\/,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_处理用户信息
-http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/(moments|topstory)(\/|\?)?(recommend|action=|feed_type=)(?!\/people),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_信息流去广告
-http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/v4\/questions,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_回答列表去广告
-http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/search\/preset_words\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js, tag=知乎_预置关键词去广告
-
-# 知乎网页显示优化 www.zhihu.com,link.zhihu.com,oia.zhihu.com
-http-response,pattern=^https:\/\/www\.zhihu\.com\/question,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js, tag=知乎网页显示优化
 
 
