@@ -4,7 +4,7 @@
 
 
 [MITM]
-hostname = %APPEND% ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com
+hostname = %APPEND% ios.prod.ftl.netflix.com, api.m.jd.com, weather-data.apple.com, api.bilibili.com
 
 
 [Script] 
@@ -19,4 +19,5 @@ http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness
 # Apple天气 weather-data.apple.com
 http-response, pattern=https://weather-data.apple.com/v1/weather/[\w-]+/[0-9]+\.[0-9]+/[0-9]+\.[0-9]+\?include=, requires-body=true, script-path=/path/to/iOS_Weather_AQI_Standard.js, tag=Apple天气
 
-
+# BiliHD
+http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js, tag=BiliHD
