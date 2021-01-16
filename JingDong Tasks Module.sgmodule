@@ -81,8 +81,6 @@ cron "30 8 * * *" script-path=https://raw.githubusercontent.com/LXK9301/jd_scrip
 工业品爱消除 = type=cron,cronexp="30 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_gyec.js
 # 宝洁美发屋 活动结束时间：2021年1月31日
 宝洁美发屋 = type=cron,cronexp="1 8,9 14-31/1 1 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_bj.js
-#盲盒抽京豆
-盲盒抽京豆 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh.js
 # 超级直播间红包雨
 超级直播间红包雨 = type=cron,cronexp="30,31 20-23/1 15 1 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain.js
 # 盲盒抽京豆
