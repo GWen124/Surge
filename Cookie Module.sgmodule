@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM] 
-hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, as.xiaojukeji.com, common.diditaxi.com.cn, h5.ele.me, i.meituan.com, wq.jd.com
+hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, as.xiaojukeji.com, common.diditaxi.com.cn, h5.ele.me, wq.jd.com, promotion.waimai.meituan.com i.meituan.com, act.10010.com, m.client.10010.com
 
 
 [Script]
@@ -29,13 +29,15 @@ Bilibili获取Cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili
 # 饿了么Cookie h5.ele.me
 饿了么Cookie = type=http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
 
-# 中国联通
+# 中国联通 act.10010.com, m.client.10010.com
 中国联通获取Cookie1 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm
 中国联通获取Cookie2 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign
 中国联通获取Cookie3 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo)
 
-# 美团 i.meituan.com
+# 美团 i.meituan.com, promotion.waimai.meituan.com
 美团获取Cookie = type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+美团外卖1获取Cookie = type=http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/entry script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js
+美团外卖2获取Cookie = type=http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js, requires-body=true
 
 #京喜农场 wq.jd.com
 京喜农场cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
