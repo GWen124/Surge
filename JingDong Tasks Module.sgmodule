@@ -7,6 +7,7 @@
 京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # https://github.com/LXK9301/jd_scripts
+# https://github.com/LXK9301/jd_scripts/blob/master/Surge/lxk0301_Task.sgmodule.sgmodule
 #东东农场
 cron "40 8-18/5 * * *" script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js,timeout=530, wake-system=1, tag=东东农场
 #东东萌宠
@@ -70,30 +71,26 @@ cron "30 8 * * *" script-path=https://raw.githubusercontent.com/LXK9301/jd_scrip
 #签到领现金
 签到领现金 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=2220,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_cash.js
 #京东家庭号
-京东家庭号 = type=cron,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_family.js, cronexpr="1 * * * *", timeout=2200, enable=true
+京东家庭号 = type=cron,cronexp="1 * * * *",wake-system=1,timeout=2220,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_family.js
 #京东口袋书城
-京东口袋书城 = type=cron,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_bookshop.js, cronexpr="1 8,12,18 * * *", timeout=2200, enable=true
+口袋书店 = type=cron,cronexp="1 8,12,18 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_bookshop.js
 #京喜签到
 京喜签到 = type=cron,cronexp="5 8 * * *",wake-system=1,timeout=1220,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jx_sign.js
 #以为为短期活动
 #京东年货节
 京东年货节 = type=cron,cronexp="0 8 * * *",wake-system=1,timeout=2220,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nh.js
 
+
 # https://github.com/shylocks/Loon
-# 工业品爱消除 
-工业品爱消除 = type=cron,cronexp="30 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_gyec.js
-# 宝洁美发屋 活动结束时间：2021年1月31日
-宝洁美发屋 = type=cron,cronexp="1 8,9 14-31/1 1 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_bj.js
-# 超级直播间红包雨
-超级直播间红包雨 = type=cron,cronexp="30,31 20-23/1 15 1 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain.js
-# 盲盒抽京豆
-盲盒抽京豆 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh.js
-# 幸运值抽京豆
-幸运值抽京豆 = type=cron,cronexp="10 20 15 1 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh_super.js
-# 京东秒秒币
-京东秒秒币 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js
-# 神券驾到
-cron "1 7 13 1 *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_super_coupon.js,tag=神券京豆
+# https://github.com/shylocks/Loon/blob/main/surge/shylocks_Task.sgmodule.sgmodule
+宝洁美发屋 = type=cron,cronexp="1 8,9 14-31/1 1 *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_bj.js
+工业品爱消除 = type=cron,cronexp="30 * * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_gyec.js
+超级直播间红包雨 = type=cron,cronexp="30,31 20-23/1 15 1 *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain.js
+盲盒抽京豆 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh.js
+超级直播间幸运值抽京豆 = type=cron,cronexp="10 20 15 1 *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh_super.js
+京东秒秒币 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js
+神券京豆 = type=cron,cronexp="1 7 13 1 *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_super_coupon.js
+京东粉丝专享 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
 
 # https://github.com/whyour/hundun/tree/master/quanx
 京东赚赚 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js
