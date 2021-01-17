@@ -9,31 +9,31 @@ hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilib
 
 [Script]
 #百度贴吧签到 c.tieba.baidu.com
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧签到
+百度贴吧签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧签到
 
 #bilibili 直播签到 *.bilibili.com
-cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=bilibili直播签到
+bilibili直播签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=bilibili直播签到
 
 # bilibili 银瓜子转硬币 *.bilibili.com
-cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js, tag=bilibili银瓜子转硬币
+bilibili银瓜子转硬币 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js, tag=bilibili银瓜子转硬币
 
 # 爱奇艺签到 ifac*.iqiyi.com
-#cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺签到
+爱奇艺签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺签到
 
-# 什么值得买 *.smzdm.com
-cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js, tag=什么值得买
+# 什么值得买签到 *.smzdm.com
+什么值得买签到 = type=cron,cronexp=10 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js, tag=什么值得买
 
 # 京东多合一签到 api.m.jd.com
-#cron "5 0 * * *" wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东多合一签到
+京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东多合一签到
 
 # 滴滴出行签到 as.xiaojukeji.com, common.diditaxi.com.cn
-cron "0 1,20 * * *" wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行签到
+滴滴出行签到 = type=cron,cronexp=0 1,20 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行签到
 
 # 饿了么吃货豆 h5.ele.me
-cron "50 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemPea.js, tag=饿了么吃货豆 
+饿了么吃货豆 = type=cron,cronexp=50 23 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemPea.js, tag=饿了么吃货豆 
 
 # 饿了么签到 h5.ele.me
-cron "0 5 0 * * *" script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js, tag=饿了么签到
+饿了么签到 = type=cron,cronexp=0 5 0 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js, tag=饿了么签到
 
 # 中国联通签到 act.10010.com, m.client.10010.com
 中国联通签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,type=cron,cronexp=10 0 0 * * *
