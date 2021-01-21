@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM] 
-hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilibili.com, as.xiaojukeji.com, common.diditaxi.com.cn, h5.ele.me, wq.jd.com, promotion.waimai.meituan.com i.meituan.com, act.10010.com, m.client.10010.com
+hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com,  *.bilibili.com, as.xiaojukeji.com, common.diditaxi.com.cn, h5.ele.me, promotion.waimai.meituan.com i.meituan.com, act.10010.com, m.client.10010.com
 
 
 [Script]
@@ -15,9 +15,6 @@ hostname= c.tieba.baidu.com, ifac*.iqiyi.com, *.smzdm.com, api.m.jd.com, *.bilib
 
 # 什么值得买Cookie *.smzdm.com
 什么值得买Cookie = type=http-request ^https:\/\/www\.smzdm\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
-
-# 京东多合一签到 api.m.jd.com
-获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # bilibili *.bilibili.com
 Bilibili获取Cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js,script-update-interval=0
@@ -38,9 +35,3 @@ Bilibili获取Cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili
 美团获取Cookie = type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
 美团外卖1获取Cookie = type=http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/entry script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js
 美团外卖2获取Cookie = type=http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js, requires-body=true
-
-#京喜农场 wq.jd.com
-京喜农场Cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
-
-#获取京东微信 wq.jd\.com
-获取京东微信Cookie = type=http-request,pattern=^https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js,script-update-interval=0
