@@ -13,7 +13,8 @@
 0 * * * * node /scripts/jd_nian.js >> /scripts/logs/jd_nian.log 2>&1
 #专门收集每秒产生的爆竹(1小时运行一次)
 30 * * * * node /scripts/jd_nianCollect.js >> /scripts/logs/jd_nianCollect.log 2>&1
-#京东炸年兽签到任务ߧ芵0 0,1 * * * node /scripts/jd_nian_sign.js >> /scripts/logs/jd_nian_sign.log 2>&1
+#京东炸年兽签到任务🧨
+50 0,1 * * * node /scripts/jd_nian_sign.js >> /scripts/logs/jd_nian_sign.log 2>&1
 #京东炸年兽AR
 50 0,1,8 * * * node /scripts/jd_nian_ar.js >> /scripts/logs/jd_nian_ar.log 2>&1
 #京东炸年兽小程序
@@ -68,7 +69,7 @@
 # 京喜工厂
 20 * * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
 # 东东小窝
-16 6 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
+16 6,23 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
 # 东东工厂
 36 * * * * node /scripts/jd_jdfactory.js >> /scripts/logs/jd_jdfactory.log 2>&1
 # 十元街
