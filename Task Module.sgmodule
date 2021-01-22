@@ -29,10 +29,9 @@ bilibili银瓜子转硬币 = type=cron,cronexp=10 0 0 * * *,script-path=https://
 # 滴滴出行签到 as.xiaojukeji.com, common.diditaxi.com.cn
 滴滴出行签到 = type=cron,cronexp=0 1,20 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行签到
 
-# 饿了么吃货豆 h5.ele.me
+# 饿了么 h5.ele.me
 饿了么吃货豆 = type=cron,cronexp=50 23 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemPea.js, tag=饿了么吃货豆 
-
-# 饿了么签到 h5.ele.me
+饿了么_领取任务 = type=cron,cronexp=00 10 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_mission.js
 饿了么签到 = type=cron,cronexp=0 5 0 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js, tag=饿了么签到
 
 # 中国联通签到 act.10010.com, m.client.10010.com
