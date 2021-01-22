@@ -1,1 +1,1 @@
-CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/GWen124/Surge/main/Docker/shell_script_mod.sh
+CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/iouAkira/someDockerfile/master/jd_scripts/shell_script_mod.sh
