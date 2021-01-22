@@ -17,6 +17,6 @@ CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/iouAkira/someDockerfile/mast
 ````
 
 ## Telegram推送
-TG_BOT_TOKEN    [具体教程]（https://github.com/LXK9301/jd_scripts/blob/master/backUp/TG_PUSH.md）
+TG_BOT_TOKEN    [具体教程][https://github.com/LXK9301/jd_scripts/blob/master/backUp/TG_PUSH.md]
 TG_USER_ID      [具体教程]（https://github.com/LXK9301/jd_scripts/blob/master/backUp/TG_PUSH.md）
 
