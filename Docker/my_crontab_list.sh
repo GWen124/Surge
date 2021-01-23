@@ -3,7 +3,7 @@
 # 每3天的23:50分清理一次日志
 50 23 */3 * * rm -rf /scripts/logs/*.log
 
-
+############################################################################################
 #LXK9301:https://github.com/LXK9301/jd_scripts/blob/master/docker/crontab_list.sh
 ##############短期活动##############
 #年货节(活动时间：2021年1月9日-2021年2月9日)
@@ -68,7 +68,7 @@
 # 京喜工厂
 20 * * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
 # 东东小窝
-16 6 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
+16 6,23 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
 # 东东工厂
 36 * * * * node /scripts/jd_jdfactory.js >> /scripts/logs/jd_jdfactory.log 2>&1
 # 十元街
@@ -105,6 +105,12 @@
 #*/20 * * * * node /scripts/jd_family.js >> /scripts/logs/jd_family.log 2>&1
 
 
+
+############################################################################################
+
+
+
+############################################################################################
 #shylocks:https://github.com/shylocks/Loon/blob/main/docker/crontab_list.sh
 # 宝洁美发屋
 1 8,9 14-31/1 1 * node /scripts/jd_bj.js >> /scripts/logs/jd_bj.log 2>&1
@@ -151,3 +157,4 @@
 # 个护爱消除
 40 * * * * node /scripts/jd_xxl_gh.js >> /scripts/logs/jd_xxl_gh.log 2>&1
 
+############################################################################################
