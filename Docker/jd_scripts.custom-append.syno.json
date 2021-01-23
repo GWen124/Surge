@@ -18,7 +18,7 @@
       },
       {
          "key" : "JD_COOKIE",
-         "value" : "pt_key=xxx;pt_pin=xxx;"
+         "value" : "pt_key=; pt_pin=;"
       },
       {
          "key" : "PUSH_KEY",
@@ -26,7 +26,19 @@
       },
       {
          "key" : "CUSTOM_LIST_FILE",
-         "value" : "my_crontab_list.sh"
+         "value" : "https://raw.githubusercontent.com/GWen124/Surge/main/Docker/crontab_list.sh"
+      },
+      {
+         "key" : "TG_BOT_TOKENE",
+         "value" : ""
+      },
+      {
+         "key" : "TG_USER_ID",
+         "value" : ""
+      },
+      {
+         "key" : "CUSTOM_SHELL_FILE",
+         "value" : "https://raw.githubusercontent.com/iouAkira/someDockerfile/master/jd_scripts/shell_script_mod.sh"
       }
    ],
    "exporting" : false,
@@ -52,12 +64,12 @@
    "use_host_network" : false,
    "volume_bindings" : [
       {
-         "host_volume_file" : "/docker/jd_scripts/my_crontab_list.sh",
+         "host_volume_file" : "/Docker/JD-Scripts/my_crontab_list.sh",
          "mount_point" : "/scripts/docker/my_crontab_list.sh",
          "type" : "rw"
       },
       {
-         "host_volume_file" : "/docker/jd_scripts/logs",
+         "host_volume_file" : "/Docker/JD-Scripts/logs",
          "mount_point" : "/scripts/logs",
          "type" : "rw"
       }
