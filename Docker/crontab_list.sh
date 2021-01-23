@@ -4,9 +4,18 @@
 50 23 */3 * * rm -rf /scripts/logs/*.log
 
 
+############################################################################################
+# 未更新，手动添加。
+############################################################################################
+#集鞭炮赢京豆
+10 8,21 * * * node /scripts/jd_firecrackers.js >> /scripts/logs/jd_firecrackers.log 2>&1
+
+
 
 ############################################################################################
-#LXK9301:https://github.com/LXK9301/jd_scripts/blob/master/docker/crontab_list.sh
+# LXK9301:
+# https://github.com/LXK9301/jd_scripts/blob/master/docker/crontab_list.sh
+# 更新于：2021.01.23
 ############################################################################################
 ##############短期活动##############
 #年货节(活动时间：2021年1月9日-2021年2月9日)
@@ -15,7 +24,7 @@
 0 * * * * node /scripts/jd_nian.js >> /scripts/logs/jd_nian.log 2>&1
 #专门收集每秒产生的爆竹(1小时运行一次)
 30 * * * * node /scripts/jd_nianCollect.js >> /scripts/logs/jd_nianCollect.log 2>&1
-#京东炸年兽签到任务
+#京东炸年兽签到任务🧨
 50 0,1 * * * node /scripts/jd_nian_sign.js >> /scripts/logs/jd_nian_sign.log 2>&1
 #京东炸年兽AR
 50 0,1,8 * * * node /scripts/jd_nian_ar.js >> /scripts/logs/jd_nian_ar.log 2>&1
@@ -23,8 +32,6 @@
 50 0,1,8 * * * node /scripts/jd_nian_wechat.js >> /scripts/logs/jd_nian_wechat.log 2>&1
 #京东神仙书院(活动时间:2021-1-20至2021-2-5)
 30 6 * * * node /scripts/jd_immortal.js >> /scripts/logs/jd_immortal.log 2>&1
-#集鞭炮赢京豆
-10 8,21 * * * node /scripts/jd_firecrackers.js >> /scripts/logs/jd_firecrackers.log 2>&1
 ##############长期活动##############
 # 签到
 0 0,18 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
@@ -112,13 +119,15 @@
 
 
 ############################################################################################
-#shylocks:https://github.com/shylocks/Loon/blob/main/docker/crontab_list.sh
+# shylocks:
+# https://github.com/shylocks/Loon/blob/main/docker/crontab_list.sh
+# 更新于：2021.01.223
 ############################################################################################
 # 宝洁美发屋
 1 8,9 14-31/1 1 * node /scripts/jd_bj.js >> /scripts/logs/jd_bj.log 2>&1
 
 # 工业品爱消除
-20 * * * * node /scripts/jd_gyec.js >> /scripts/logs/jd_gyec.log 2>&1
+#20 * * * * node /scripts/jd_gyec.js >> /scripts/logs/jd_gyec.log 2>&1
 
 # 超级直播间红包雨
 30,31 20-23/1 19 1 * node /scripts/jd_live_redrain.js >> /scripts/logs/jd_live_redrain.log 2>&1
@@ -154,9 +163,8 @@
 5 7 * * * node /scripts/jd_xg.js >> /scripts/logs/jd_xg.log 2>&1
 
 # 东东爱消除
-0 * * * * node /scripts/jd_xxl.js >> /scripts/logs/jd_xxl.log 2>&1
+# 0 * * * * node /scripts/jd_xxl.js >> /scripts/logs/jd_xxl.log 2>&1
 
 # 个护爱消除
-40 * * * * node /scripts/jd_xxl_gh.js >> /scripts/logs/jd_xxl_gh.log 2>&1
-
+# 40 * * * * node /scripts/jd_xxl_gh.js >> /scripts/logs/jd_xxl_gh.log 2>&1
 
