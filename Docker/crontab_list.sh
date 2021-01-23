@@ -1,3 +1,5 @@
+# 定时更新
+0 */1 * * * git -C /scripts/ pull |ts >> /scripts/logs/pull.log 2>&1
 #必须要的默认定时任务请勿删除
 52 */1 * * * docker_entrypoint.sh >> /scripts/logs/default_task.log 2>&1
 # 每3天的23:50分清理一次日志
