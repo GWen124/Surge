@@ -15,6 +15,10 @@ https://registry.hub.docker.com/r/lxk0301/jd_scripts/
 ````
 CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/iouAkira/someDockerfile/master/jd_scripts/shell_script_mod.sh
 ````
+## 远程挂载
+```
+CUSTOM_LIST_FILE=https://raw.githubusercontent.com/shylocks/Loon/main/docker/crontab_list.sh
+````
 
 ## Telegram推送
 TG_BOT_TOKEN        [具体教程](https://github.com/LXK9301/jd_scripts/blob/master/backUp/TG_PUSH.md) 
