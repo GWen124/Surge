@@ -4,8 +4,5 @@
 # 定时更新
 0 */1 * * * git -C /scripts/ pull |ts >> /scripts/logs/pull.log 2>&1
 
-#集鞭炮赢京豆
-10 8,21 * * * node /scripts/jd_firecrackers.js >> /scripts/logs/jd_firecrackers.log 2>&1
-
 
 ##############################################################################################
