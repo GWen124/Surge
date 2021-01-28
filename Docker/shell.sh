@@ -10,6 +10,5 @@ else
     echo "更新脚本文件"
     git -C /Tartarus2014 reset --hard
     git -C /Tartarus2014 pull --rebase
-    npm install --loglevel error
 fi
 cp -f Tartarus2014/jd*.js /scripts
