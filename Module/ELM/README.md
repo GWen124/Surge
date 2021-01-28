@@ -1,3 +1,12 @@
+# 来源
+https://github.com/blackmatrix7/ios_rule_script/tree/master/script/eleme
+
+# 模块
+````
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.sgmodule
+````
+
+
 # 饿了么
 
 饿了么每日自动领取会员任务，及自动领取吃货豆功能。
@@ -31,6 +40,5 @@
 
 ### Surge
 
-使用模块
 
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.sgmodule
+
