@@ -1,8 +1,9 @@
-# 来源
+#  bilibili签到
+
+
+## 来源
 https://github.com/chavyleung/scripts/tree/master/bilibili
 
-
- bilibili
 
 > 代码已同时兼容 Surge & QuanX, 使用同一份签到脚本即可
 
