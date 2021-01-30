@@ -54,5 +54,3 @@
 # 京年团圆pick
 5 0 19,20 1 * node https://gitee.com/waynesg/jdscript/raw/master/jd_vote.js >> /scripts/logs/jd_vote.log 2>&1
 
-# 京东粉丝专享
-10 0 * * * node https://gitee.com/waynesg/jdscript/raw/master/jd_wechat_sign.js >> /scripts/logs/
