@@ -21,6 +21,13 @@
 ##############################################################################################
 
 
+#超级直播间任务赢京豆
+40 21 * * * node https://gitee.com/waynesg/jdscript/raw/master/jd_super.js >> /scripts/logs/jd_super.log 2>&1
+
+
+##############################################################################################
+
+
 ############################################################################################
 # shylocks:
 # https://github.com/shylocks/Loon/raw/main/docker/crontab_list.sh
@@ -33,10 +40,10 @@
 #20 * * * * node /scripts/jd_gyec.js >> /scripts/logs/jd_gyec.log 2>&1
 
 # 超级直播间红包雨
-30,31 20-23/1 19 1 * node https://gitee.com/waynesg/jdscript/raw/master/jd_live_redrain.js >> /scripts/logs/jd_live_redrain.log 2>&1
+30,31 20-23/1 28 1 * node http://qnn9kdmd1.hn-bkt.clouddn.com/jd_live_redrain.js >> /scripts/logs/jd_live_redrain.log 2>&1
 
 # 直播间红包雨
-0,1 19-21/1 * * * node https://gitee.com/waynesg/jdscript/raw/master/jd_live_redrain2.js >> /scripts/logs/jd_live_redrain2.log 2>&1
+30,31 20-23/1 28 1 * node http://qnn9kdmd1.hn-bkt.clouddn.com/jd_live_redrain2.js >> /scripts/logs/jd_live_redrain2.log 2>&1
 
 # 半点红包雨
 30,31 12-23/1 * * * node https://gitee.com/waynesg/jdscript/raw/master/jd_live_redrain_half.js >> /scripts/logs/jd_live_redrain_half.log 2>&1
@@ -60,4 +67,4 @@
 5 0 19,20 1 * node https://gitee.com/waynesg/jdscript/raw/master/jd_vote.js >> /scripts/logs/jd_vote.log 2>&1
 
 # 京东粉丝专享
-10 0 * * * node https://gitee.com/waynesg/jdscript/raw/master/jd_wechat_sign.js 
+10 0 * * * node https://gitee.com/waynesg/jdscript/raw/master/jd_wechat_sign.js >> /scripts/logs/
